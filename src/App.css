@@ -1,0 +1,240 @@
+.app-shell {
+  width: min(860px, 100%);
+  margin: 3.5rem auto;
+  padding: 0 1.25rem 2.5rem;
+}
+
+.card {
+  background: #ffffff;
+  border: 1px solid #e5e7eb;
+  border-radius: 16px;
+  padding: 2rem;
+  box-shadow: 0 12px 28px -20px rgba(15, 23, 42, 0.45);
+}
+
+.card + .card {
+  margin-top: 1.5rem;
+}
+
+.header h1 {
+  margin: 0.4rem 0 0.8rem;
+  font-size: clamp(1.75rem, 2.5vw, 2.25rem);
+  line-height: 1.2;
+}
+
+.brand {
+  margin: 0 0 0.45rem;
+  font-size: 1rem;
+  font-weight: 700;
+  letter-spacing: 0.01em;
+  color: #1e3a8a;
+}
+
+.eyebrow {
+  margin: 0;
+  font-size: 0.8rem;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  color: #4b5563;
+  font-weight: 600;
+}
+
+.subtitle {
+  margin: 0;
+  color: #4b5563;
+  line-height: 1.5;
+}
+
+.progress-wrap {
+  margin: 1.8rem 0;
+}
+
+.progress-meta {
+  display: flex;
+  justify-content: space-between;
+  font-size: 0.88rem;
+  color: #4b5563;
+  margin-bottom: 0.6rem;
+}
+
+.progress-track {
+  height: 10px;
+  border-radius: 999px;
+  background: #eef2f7;
+  overflow: hidden;
+}
+
+.progress-fill {
+  height: 100%;
+  border-radius: inherit;
+  background: #2563eb;
+  transition: width 0.25s ease;
+}
+
+.step-head {
+  margin: 0 0 1.25rem;
+}
+
+.step-head h2 {
+  margin: 0 0 0.35rem;
+  font-size: 1.3rem;
+}
+
+.step-head p {
+  margin: 0;
+  color: #4b5563;
+}
+
+.field-grid {
+  display: grid;
+  gap: 1rem;
+}
+
+.field {
+  display: grid;
+  gap: 0.45rem;
+}
+
+.field > span,
+.field legend {
+  font-weight: 600;
+  color: #1f2937;
+}
+
+.field input,
+.field textarea,
+.field select {
+  width: 100%;
+  border: 1px solid #d1d5db;
+  border-radius: 10px;
+  font: inherit;
+  color: #111827;
+  background: #ffffff;
+  padding: 0.72rem 0.8rem;
+  box-sizing: border-box;
+}
+
+.field textarea {
+  resize: vertical;
+  min-height: 100px;
+}
+
+.field input:focus,
+.field textarea:focus,
+.field select:focus {
+  outline: 2px solid rgba(37, 99, 235, 0.2);
+  border-color: #2563eb;
+}
+
+.slider-wrap {
+  display: flex;
+  align-items: center;
+  gap: 0.8rem;
+}
+
+.slider-wrap input[type='range'] {
+  flex: 1;
+  padding: 0;
+}
+
+.slider-wrap output {
+  min-width: 2ch;
+  font-weight: 700;
+  color: #1d4ed8;
+}
+
+.radio-group {
+  display: grid;
+  gap: 0.55rem;
+  margin-top: 0.2rem;
+}
+
+.radio-group label {
+  display: flex;
+  align-items: center;
+  gap: 0.55rem;
+  color: #111827;
+}
+
+.fieldset,
+fieldset.field {
+  margin: 0;
+  padding: 0;
+  border: 0;
+}
+
+.allocation-grid {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 0.8rem;
+}
+
+.actions {
+  margin-top: 1.5rem;
+  display: flex;
+  justify-content: space-between;
+  gap: 0.75rem;
+}
+
+button {
+  border: 1px solid #cbd5e1;
+  background: #ffffff;
+  color: #1f2937;
+  border-radius: 10px;
+  font: inherit;
+  padding: 0.65rem 1rem;
+  cursor: pointer;
+}
+
+button:disabled {
+  cursor: not-allowed;
+  opacity: 0.6;
+}
+
+button.primary {
+  background: #2563eb;
+  border-color: #2563eb;
+  color: #ffffff;
+}
+
+button:not(:disabled):hover {
+  border-color: #94a3b8;
+}
+
+button.primary:not(:disabled):hover {
+  background: #1d4ed8;
+}
+
+.error {
+  color: #b91c1c;
+  font-size: 0.84rem;
+}
+
+.output-card pre {
+  margin: 1rem 0 0;
+  border: 1px solid #dbe2ea;
+  background: #f8fafc;
+  border-radius: 10px;
+  padding: 0.95rem;
+  overflow: auto;
+  font-size: 0.86rem;
+}
+
+.output-actions {
+  margin-top: 1rem;
+}
+
+@media (max-width: 760px) {
+  .app-shell {
+    margin: 1.5rem auto;
+    padding-inline: 0.9rem;
+  }
+
+  .card {
+    padding: 1.25rem;
+  }
+
+  .allocation-grid {
+    grid-template-columns: 1fr;
+  }
+}
